@@ -61,7 +61,7 @@
     </filter-mapping>
 
 
-    <!--任何以html结尾的请求资源都以UTF-8格式打开  重要!!!!!!!!-->
+    <!--任何以html和js结尾的请求资源都以UTF-8格式打开  重要!!!!!!!!-->
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.html</url-pattern>
@@ -69,8 +69,6 @@
             <page-encoding>UTF-8</page-encoding>
         </jsp-property-group>
     </jsp-config>
-
-
 
 
 </web-app>

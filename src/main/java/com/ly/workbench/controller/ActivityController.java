@@ -43,45 +43,6 @@ public class ActivityController {
     }
 
 
-    //市场活动添加操作
-    /*@RequestMapping(value = "save.do",method = RequestMethod.POST)
-    public void save(HttpServletRequest request,HttpServletResponse response){
-        System.out.println("执行市场活动添加操作");
-
-        String id = UUIDUtil.getUUID();
-        String owner = request.getParameter("owner");
-        String name = request.getParameter("name");
-        String startDate = request.getParameter("startDate");
-        String endDate = request.getParameter("endDate");
-        String cost = request.getParameter("cost");
-        String description = request.getParameter("description");
-        //创建时间为当前系统时间·
-        String createTime = DateTimeUtil.getSysTime();
-        //创建人为当前登录用户
-        String createBy = ((User)request.getSession().getAttribute("user")).getName();
-
-        Activity a = new Activity();
-        a.setId(id);
-        a.setOwner(owner);
-        a.setName(name);
-        a.setStartDate(startDate);
-        a.setEndDate(endDate);
-        a.setCost(cost);
-        a.setDescription(description);
-        a.setCreateBy(createBy);
-        a.setCreateTime(createTime);
-
-        System.out.println("Activity a ="+a);
-
-        boolean flag = activityService.save(a);
-        System.out.println("flag="+flag);
-
-        PrintJson.printJsonFlag(response,flag);
-
-
-    }*/
-
-
     //执行市场活动添加操作
     @RequestMapping(value = "save.do",method = RequestMethod.POST)
     public ModelAndView save(Activity activity,HttpServletRequest request){

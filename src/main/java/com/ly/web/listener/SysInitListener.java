@@ -50,8 +50,6 @@ public class SysInitListener implements ServletContextListener {
         }
         application.setAttribute("pMap",pMap);
 
-
-
     }
 
     @Override

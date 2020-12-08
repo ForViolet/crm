@@ -15,6 +15,7 @@
 	<script type="text/javascript">
 		$(function () {
 
+			//使login.jsp始终在顶层窗口，目的是为了不让iframe嵌入页面
 			if(window.top!=window){
 				window.top.location=window.location;
 			}
@@ -27,13 +28,15 @@
 				login();
 			})
 
+			//键盘回车键触发登录功能
 			$(window).keydown(function (event) {
 				if(event.keyCode == 13){
 					login();
 				}
 			})
 		})
-		
+
+		//登录函数
 		function login() {
 			let loginAct = $.trim($("#loginAct").val());
 			let loginPwd = $.trim($("#loginPwd").val());
@@ -59,8 +62,10 @@
 				}
 			})
 		}
+
 	</script>
 </head>
+
 <body>
 	<div style="position: absolute; top: 0px; left: 0px; width: 60%;">
 		<img src="image/IMG_7114.JPG" style="width: 100%; height: 90%; position: relative; top: 50px;">

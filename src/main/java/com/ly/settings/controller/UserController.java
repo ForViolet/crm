@@ -22,6 +22,7 @@ public class UserController {
     private UserService service;
 
 
+    //登录验证操作
     @RequestMapping(value = "login.do",method = RequestMethod.POST)
     public void login(String loginAct,String loginPwd,HttpServletRequest request, HttpServletResponse response){
         System.out.println("登录验证操作");

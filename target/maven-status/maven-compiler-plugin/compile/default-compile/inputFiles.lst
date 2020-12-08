@@ -2,6 +2,7 @@ G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\Clue
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\ActivityService.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\handler\UserInterceptor.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\dao\CustomerRemarkDao.java
+G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\CustomerService.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\impl\ClueServiceImpl.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\dao\UserDao.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\service\UserService.java
@@ -16,7 +17,9 @@ G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\vo\PaginationVO.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\dao\DicValueDao.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\utils\MD5Util.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\dao\ActivityRemarkDao.java
+G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\TranService.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\service\impl\UserServiceImpl.java
+G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\impl\TranServiceImpl.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\ClueService.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\domain\DicValue.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\ContactsActivityRelation.java
@@ -27,6 +30,7 @@ G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\Clue
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\Contacts.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\dao\ContactsDao.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\web\listener\SysInitListener.java
+G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\controller\TranController.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\utils\UUIDUtil.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\Tran.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\TranHistory.java
@@ -46,4 +50,5 @@ G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\controller\U
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\settings\domain\User.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\controller\ActivityController.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\utils\DateTimeUtil.java
+G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\service\impl\CustomerServiceImpl.java
 G:\Java\Java Projects\CRM\crm\crm_pro\src\main\java\com\ly\workbench\domain\CustomerRemark.java

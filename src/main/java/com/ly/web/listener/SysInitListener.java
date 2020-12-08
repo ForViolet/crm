@@ -8,9 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SysInitListener implements ServletContextListener {
 
@@ -36,6 +34,23 @@ public class SysInitListener implements ServletContextListener {
         }
 
         System.out.println("服务器缓存处理数据字典结束");
+
+
+        /**
+         * 数据字典处理完毕后，处理Stage2Prossibility.properties配置文件：
+         * 解析该文件，将文件中键值对关系处理成java中键值对关系（map）
+         * */
+        Map<String,String> pMap = new HashMap<>();
+        ResourceBundle rb = ResourceBundle.getBundle("Stage2Possibility");
+        Enumeration<String> e = rb.getKeys();
+        while(e.hasMoreElements()){
+            String key = e.nextElement();
+            String value = rb.getString(key);
+            pMap.put(key, value);
+        }
+        application.setAttribute("pMap",pMap);
+
+
 
     }
 

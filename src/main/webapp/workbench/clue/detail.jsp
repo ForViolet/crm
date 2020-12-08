@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 
 <link href="jquery/bootstrap_3.3.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="jquery/jquery-1.11.1-min.js"></script>
+<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="jquery/bootstrap_3.3.0/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
@@ -62,11 +62,10 @@
 		//通过触发回车键，查询并展示对应市场活动列表
 		$("#aname").keydown(function (event) {
 			if(event.keyCode == 13){
-
 				$.ajax({
 					url:"workbench/clue/getActivityListByNameAndNotByClueId.do",
 					data:{
-						"anmae":$.trim($("#anmae").val()),
+						"aname":$.trim($("#aname").val()),
 						"clueId":"${c.id}"
 					},
 					type:"get",
@@ -88,6 +87,44 @@
 				})
 				//展现完列表后，将模态窗口的默认回车行为禁用
 				return false;
+			}
+		})
+
+
+		//为关联按钮绑定事件，执行关联标的添加操作(支持批量添加)
+		$("#bundBtn").click(function () {
+			var $xz = $("input[name=xz]:checked");
+			if($xz.length==0){
+				alert("请选择需要关联的市场活动");
+			}else{
+				var param = "cid=${c.id}&";
+				for(var i=0;i<$xz.length;i++){
+					param += "aid="+$($xz[i]).val();
+					if(i<$xz.length-1){
+						param += "&";
+					}
+				}
+				$.ajax({
+					url:"workbench/clue/bund.do",
+					data:param,
+					type:"post",
+					dataType:"json",
+					success:function (data) {
+						if(data){
+							//刷新关联市场活动列表
+							showActivityList();
+
+							//清除搜索框中的信息，清空复选框选择，清除活动列表内容()
+							$("#aname").val("");
+
+							//关闭模态窗口
+							$("#bundModal").modal("hide");
+						}else{
+							alert("关联市场活动失败");
+						}
+
+					}
+				})
 			}
 		})
 
@@ -199,7 +236,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal">关联</button>
+					<button type="button" class="btn btn-primary" id="bundBtn">关联</button>
 				</div>
 			</div>
 		</div>
@@ -372,7 +409,7 @@
 			<h3>${c.fullname} ${c.appellation} <small> ${c.company} </small></h3>
 		</div>
 		<div style="position: relative; height: 50px; width: 500px;  top: -72px; left: 700px;">
-			<button type="button" class="btn btn-default" onclick="window.location.href='workbench/clue/convert.jsp';"><span class="glyphicon glyphicon-retweet"></span> 转换</button>
+			<button type="button" class="btn btn-default" onclick="window.location.href='workbench/clue/convert.jsp?id=${c.id}&fullname=${c.fullname}&appellation=${c.appellation}&company=${c.company}&owner=${c.owner}';"><span class="glyphicon glyphicon-retweet"></span> 转换</button>
 			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#editClueModal"><span class="glyphicon glyphicon-edit"></span> 编辑</button>
 			<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-minus"></span> 删除</button>
 		</div>

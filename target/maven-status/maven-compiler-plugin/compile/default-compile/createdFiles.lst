@@ -9,6 +9,7 @@ com\ly\workbench\dao\TranDao.class
 com\ly\settings\controller\UserController.class
 com\ly\web\listener\SysInitListener.class
 com\ly\workbench\service\impl\ActivityServiceImpl.class
+com\ly\workbench\service\impl\CustomerServiceImpl.class
 com\ly\workbench\domain\ContactsRemark.class
 com\ly\settings\dao\UserDao.class
 com\ly\workbench\domain\Activity.class
@@ -21,6 +22,7 @@ com\ly\settings\domain\DicValue.class
 com\ly\utils\UUIDUtil.class
 com\ly\settings\handler\UserInterceptor.class
 com\ly\workbench\service\ActivityService.class
+com\ly\workbench\service\CustomerService.class
 com\ly\workbench\dao\ContactsActivityRelationDao.class
 com\ly\workbench\domain\ClueRemark.class
 com\ly\settings\service\UserService.class
@@ -33,17 +35,20 @@ com\ly\settings\domain\DicType.class
 com\ly\vo\PaginationVO.class
 com\ly\workbench\domain\Customer.class
 com\ly\workbench\dao\ContactsDao.class
+com\ly\workbench\service\TranService.class
 com\ly\settings\dao\DicTypeDao.class
 com\ly\workbench\dao\CustomerRemarkDao.class
 com\ly\workbench\dao\ContactsRemarkDao.class
 com\ly\workbench\controller\ClueController.class
 com\ly\workbench\domain\ContactsActivityRelation.class
 com\ly\workbench\service\impl\ClueServiceImpl.class
+com\ly\workbench\controller\TranController.class
 com\ly\settings\dao\DicValueDao.class
 com\ly\workbench\domain\TranHistory.class
 com\ly\workbench\domain\ActivityRemark.class
 com\ly\workbench\domain\Tran.class
 com\ly\utils\MD5Util.class
 com\ly\workbench\domain\CustomerRemark.class
+com\ly\workbench\service\impl\TranServiceImpl.class
 com\ly\workbench\dao\ActivityRemarkDao.class
 com\ly\settings\service\DicService.class

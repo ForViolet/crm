@@ -1,4 +1,4 @@
 # crm项目实战 
-具体内容见master分支
+具体内容见[master](https://github.com/ForViolet/crm/tree/master)分支
 
 
